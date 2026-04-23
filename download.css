@@ -1,0 +1,84 @@
+body {
+  margin: 0px 10px 0px 10px; /* top right bottom left */
+  font-family: sans-serif;
+  background: #ffffff;
+  color: rgb(164, 24, 24);
+  font-family: "Bitcount Single", system-ui;
+  text-transform: uppercase;
+}
+
+/* BACK BUTTON */
+.back {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  text-decoration: none;
+  font-size: 30px;
+  color:black;
+  font-family: "Bitcount Single", system-ui;
+}
+
+
+
+.back:hover {
+  transform: scale(1.4);
+  transition: all 0.6s ease;
+}
+
+
+/* CONTENT */
+.container {
+  
+  
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 100px;
+ margin-top: 20px;
+ margin-bottom: 0px;
+  font-weight: 400;
+  color: black;
+}
+
+h1:hover {
+transition: all 0.8s ease;
+  font-weight: 500;
+   
+}
+
+p {
+  
+  margin: 10px 10px 200px 10px; /* top right bottom left */
+}
+
+/* BUTTON */
+.download-btn {
+
+
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+    padding: 20px 20px 20px 20px; /* top right bottom left */
+  border: 4px dotted rgb(180,20,20);
+  color: rgb(164, 24, 24); 
+  font-size: 40px;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+   text-decoration: none;
+
+  transition: 0.3s;
+
+   margin: 80px 10px 0px 650px; /* top right bottom left */
+
+}
+
+.download-btn:hover {
+  background: rgba(180,20,20,0.1);
+}
+
+

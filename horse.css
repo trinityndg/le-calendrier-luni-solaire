@@ -1,0 +1,72 @@
+
+
+body {
+  margin: 0;
+  height: 800vh; /* more scroll space */
+  background: rgb(255, 255, 255);
+  font-family: "Bitcount Single", system-ui;
+  padding: 10px;
+}
+
+h1 {
+  margin-top: 15px;
+  letter-spacing: -2px;
+  font-size: 100px;
+  text-transform: uppercase;
+  font-family: "Bitcount Single", system-ui;
+  font-weight: 400;
+  line-height: 85px;
+  padding-top: 10px;
+} 
+
+h1:hover {
+transition: all 0.8s ease;
+  font-weight: 500;
+}
+
+.sticky-title {
+  position: sticky;
+  top: 0;
+
+  background: rgba(255, 255, 255, 0); /* important so it doesn't overlap ugly */
+  padding: 0px;
+
+  z-index: 1000; /* stays above everything */
+}
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 125vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#frame {
+  width: 1500px; /* adjust size */
+} 
+
+.back {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+font-family: "Bitcount Single", system-ui;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+
+  z-index: 2000; /* 👈 VERY IMPORTANT */
+}
+
+.container {
+  position: fixed;
+  z-index: 1; /* lower than .back */
+}
+
+.back:hover {
+  transform: scale(1.4);
+  transition: all 0.6s ease;
+}

@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  background: #ffffff;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+/* TITLE */
+.title {
+  color: rgb(164, 24, 24);
+  font-size: 80px;
+  line-height: 50px;
+   font-family: "Patriot-Mediume";
+   margin: 20px 10px 0px 10px; /* top right bottom left */
+  
+}
+
+.title span {
+  font-size: 45px;
+   font-family: "Patriot-1";
+   letter-spacing: 4px;
+
+}
+
+/* CANVAS */
+.month {
+  position: relative;
+  width: 100vw;
+  height: calc(80vh - 110px);
+  max-height: 800px;
+}
+
+/* BIGGER circles */
+
+
+/* DAY CIRCLES */
+.day {
+  position: absolute;
+  border: 4px dotted rgb(164, 24, 24);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: rgb(180, 20, 20);
+  font-weight: 500;
+  font-family: "Patriot-Mediume";
+background-color: #ffffff;
+  transition: all 0.4s ease;
+
+  z-index: 1;
+
+  
+}
+
+/* move animation to a wrapper effect */
+.day::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: float 6s infinite ease-in-out;
+}
+
+.day.large {
+  z-index: 2;
+}
+
+/* SIZE SYSTEM */
+.small { width: 7.5vw; height: 7.5vw; font-size: 2vw;  font-family: "Patriot-1"; }
+.medium { width: 10vw; height: 10vw; font-size: 3vw; font-family: "Patriot-2"; }
+.large { width: 13vw; height: 13vw; font-size: 5vw; }
+
+/* MOON */
+.moon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgb(164, 24, 24);
+  margin-top: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* HOVER */
+.day:hover {
+  transform: scale(1.15);
+  background: rgba(180, 20, 20, 0.05);
+}
+
+.day:hover .moon {
+  opacity: 1;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(0px); }
+  100% { transform: translateY(0px); }
+}
+
+@font-face {
+      font-family: "Patriot-Mediume";
+      src: url(Patriot-UltraBold.otf);
+}
+
+
+@font-face {
+      font-family: "Patriot-1";
+      src: url(Patriot-Normal.otf);
+}
+@font-face {
+      font-family: "Patriot-2";
+      src: url(Patriot-Medium.otf);
+}
+
+.back {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+
+  font-size: 30px;
+  text-decoration: none;
+  color: rgb(164, 24, 24);
+  font-family: "Bitcount Single", system-ui;
+
+  z-index: 2000; /* 👈 VERY IMPORTANT */
+}
+
+.container {
+  position: fixed;
+  z-index: 1; /* lower than .back */
+}
+
+.back:hover {
+  transform: scale(1.4);
+  transition: all 0.6s ease;
+}

@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: "Bitcount Single", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 100px;
+  text-align: left;
+  margin: 10px 10px 10px 10px; /* top right bottom left */
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h1:hover {
+transition: all 0.8s ease;
+  font-weight: 500;
+   
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 10px;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  cursor: pointer;
+}
+
+.card img {
+  width: 150px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+/* TEXT */
+.name {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: "Patriot-Mediume";
+}
+
+.years {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: -20px;
+}
+
+/* HOVER */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 180px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.638);
+  opacity: 0;
+  transition: 0.3s;
+   text-transform: uppercase;
+}
+
+.card:hover img {
+  opacity: 0.2;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* PANEL */
+.info-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-content {
+  max-width: 500px;
+}
+
+.close {
+  position: absolute;
+  top: 300px;
+  right: 200px;
+  font-size: 70px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.845);
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 125vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#frame {
+  width: 1500px; /* adjust size */
+} 
+
+.back {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  font-family: "Bitcount Single", system-ui;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+
+  z-index: 2000; /* 👈 VERY IMPORTANT */
+}
+
+.container {
+  position: fixed;
+  z-index: 1; /* lower than .back */
+}
+
+.back:hover {
+  transform: scale(1.4);
+  transition: all 0.6s ease;
+}
+
+@font-face {
+      font-family: "Patriot-Mediume";
+      src: url(Patriot-Medium.otf);
+}
