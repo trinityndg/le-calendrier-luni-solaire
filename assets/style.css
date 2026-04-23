@@ -1,0 +1,220 @@
+/* Pistes d'exploration :
+- changer la police de caractères
+      @font-face
+      font-family: ;
+- changer la graisse (bold, light, etc.)
+      font-weight: ;
+- changer le style (normal, italic, oblique)
+      font-style: ;
+- changer la largeur (condensed, expanded)
+      font-stretch: ;
+- changer la décoration (underline, overline, line-through)
+      text-decoration: ;
+- changer la casse (uppercase, lowercase, capitalize)
+      text-transform: ;
+- modifier l’interlettrage
+      letter-spacing: ;
+- modifier l’interligne
+      line-height: ;
+- changer l’espacement des mots
+      word-spacing: ;
+- tester les césures
+      hyphens: ;
+- ajouter une ombre portée (drop shadow)
+      text-shadow: ;
+- rendre le texte flou
+      filter: ;
+- l’animer (jouer avec rotation, opacité, couleur, fond)
+      transition: ;
+      transform: ;
+      opacity: ;
+      background-color: ;
+- changer l’interaction au survol (:hover)
+      :hover {
+      }
+- amusez-vous !
+      mix-blend-mode: ;
+      writing-mode: ;
+      transform: ;
+*/
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(255, 255, 255);
+  cursor: none; /* hide default cursor */
+}
+
+.bye {
+font-family: "Bitcount Single", system-ui;
+  font-weight: 300;
+  font-size: 40px;
+  margin-top: 200px;
+  color: black;
+  text-transform: uppercase;
+  
+}
+
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(164, 24, 24);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  pointer-events: none;
+  z-index: 9999;
+
+  transform: translate(-50%, -50%);
+}
+
+.titre-projet {
+  margin-top: 150px;
+  font-family: "Patriot-UltraBold";
+  text-transform: uppercase;
+  animation: pulse 1s infinite;
+  font-weight: 300;
+  font-size: 200px;
+  line-height: 190px;
+  cursor:col-resize;
+  text-align: center;
+  letter-spacing: -4px;
+cursor: none; /* hide default cursor */
+}
+
+a {
+cursor: none; /* hide default cursor */
+}
+
+
+
+/* interaction au survol */
+
+.titre-projet.active {
+  transform: scale(1.05);
+  letter-spacing: 4px;
+  font-weight: 700;
+  line-height: 170px;
+  margin-top: 30px;
+  transition: all 0.8s ease;
+}
+
+.today {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#today-date:hover{
+
+  transition: all 0.8s ease;
+  font-weight: 400;
+}
+
+#today-date {
+  font-family: "Bitcount Single", system-ui;
+  font-size: 120px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+#moon-phase {
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 170px;
+   font-family: "Bitcount Single", system-ui;
+   text-transform: uppercase;
+}
+
+.main-image {
+  width: 80%;
+  max-width: 200px;
+
+  display: block;
+  margin: 20px auto;
+  padding-bottom: 40px;
+}
+
+.video {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 80px auto;
+}
+
+.image-1 {
+  width: 80%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+  padding-bottom: 40px;
+}
+
+.image-2 {
+  width: 80%;
+  max-width: 900px;
+  display: block;
+  margin: 20px auto;
+  padding-bottom: 40px;
+}
+
+
+/* animation */
+@keyframes pulse {
+  0% { color: rgb(115, 10, 10); }
+
+  100% { color: rgb(164, 24, 24);}
+}
+
+.link {
+  display: block;
+  text-align: center;
+  margin: 40px;
+font-family: "Bitcount Single", system-ui;
+  text-decoration: none;
+  color: black;
+
+  font-size: 35px;
+  
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+}
+
+@font-face {
+      font-family: "Patriot-UltraBold";
+      src: url(Patriot-UltraBold.otf);
+}
+
+@font-face {
+      font-family: "Patriot-Mediume";
+      src: url(Patriot-Medium.otf);
+}
+
+.ascii {
+  font-family: monospace;
+  font-size: 30px;
+  line-height: 35px;
+
+  white-space: pre;
+  text-align: center;
+
+  margin: 40px auto;
+}
+
